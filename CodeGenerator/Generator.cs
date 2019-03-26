@@ -5,11 +5,23 @@ namespace CodeGenerator
 {
     static public class Generator
     {
+        /// <summary>
+        /// Encode from data(string,DateTime,uint) to string Code
+        /// </summary>
+        /// <param name="name">Наименование объекта</param>
+        /// <param name="date">Дата</param>
+        /// <param name="account">Лицевой счет, 8 цифр</param>
+        /// <returns>Cтрока содержащая цифро-буквенный код</returns>
         static public string Encode(string name, DateTime date, uint account)
         {
             return GetCorrectName(name) + GetEncodeDate(date) + GetEncodeAccount(account);
         }
 
+        /// <summary>
+        /// Decode from Code(string) to data(string,DateTime,uint)
+        /// </summary>
+        /// <param name="code">Cтрока содержащая цифро-буквенный код</param>
+        /// <returns>Данные(string,DateTime,uint): Наименование объекта, Дата, Лицевой счет, 8 цифр</returns>
         static public (string, DateTime, uint) Decode(string code)
         {
             if (code.Length < 11)
