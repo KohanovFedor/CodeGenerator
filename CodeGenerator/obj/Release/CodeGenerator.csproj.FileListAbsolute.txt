@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\bin\Release\CodeGenerator.dll
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\bin\Release\CodeGenerator.pdb
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Release\CodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Release\CodeGenerator.dll
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Release\CodeGenerator.pdb
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Release\CodeGenerator.csprojAssemblyReference.cache

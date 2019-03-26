@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.dll
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.pdb
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\bin\Debug\System.ValueTuple.dll
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\bin\Debug\System.ValueTuple.xml
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csprojAssemblyReference.cache
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csproj.CopyComplete
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.dll
+C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
