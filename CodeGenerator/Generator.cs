@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Text;
+using System.Globalization;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("Tests")]
 namespace CodeGenerator
 {
     static public class Generator
@@ -29,12 +32,15 @@ namespace CodeGenerator
             return (GetName(code), GetDecodeDate(code), GetDecodeAccount(code));
         }
 
-        static private string GetCorrectName(string name)
+        static internal string GetCorrectName(string name)
         {
-            return (name.Length > 8)? name.Substring(0, 8):name;
+            if (name == null)
+                throw new ArgumentNullException("Наименование объекта не должно быть пустым");
+            else
+                return (name.Length > 8)? name.Substring(0, 8):name;
         }
 
-        static private string GetEncodeDate(DateTime date)
+        static internal string GetEncodeDate(DateTime date)
         {
             StringBuilder result= new StringBuilder();
             result.Append(Base36.Encode(date.Day));
@@ -48,22 +54,22 @@ namespace CodeGenerator
             return result.ToString();
         }
 
-        static private string GetEncodeAccount(uint account)
+        static internal string GetEncodeAccount(uint account)
         {
             string result = "";
-            if(account>99999999 && account<1)
+            if(account>99999999 || account<1)
                 throw new ArgumentOutOfRangeException("Cannot represent the account.");
             result = Base36.Encode((int)account);
             result = result.PadLeft(6,'0');
             return result;
         }
 
-        static private string GetName(string code)
+        static internal string GetName(string code)
         {
             return code.Substring(0,code.Length-10);
         }
 
-        static private DateTime GetDecodeDate(string code)
+        static internal DateTime GetDecodeDate(string code)
         {
             string tmpDay = code.Substring(code.Length - 10, 1);
             string tmpMonth = code.Substring(code.Length - 9, 1);
@@ -71,10 +77,10 @@ namespace CodeGenerator
             tmpDay = Base36.Decode(tmpDay).ToString().PadLeft(2,'0');
             tmpMonth = Base36.Decode(tmpMonth).ToString().PadLeft(2,'0');
             tmpYear = (2000 + Base36.Decode(tmpYear)).ToString();
-            return DateTime.ParseExact(tmpDay + tmpMonth + tmpYear, "ddMMyyyy", System.Globalization.CultureInfo.InvariantCulture);
+            return DateTime.ParseExact(tmpDay + tmpMonth + tmpYear, "ddMMyyyy", CultureInfo.InvariantCulture);
         }
 
-        static private uint GetDecodeAccount(string code)
+        static internal uint GetDecodeAccount(string code)
         {
             return (uint)Base36.Decode(code.Substring(code.Length - 6));
         }

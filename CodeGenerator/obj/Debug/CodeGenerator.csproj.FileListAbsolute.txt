@@ -7,3 +7,9 @@ C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.c
 C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csproj.CopyComplete
 C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.dll
 C:\Users\User\source\repos\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
+C:\Users\kohanov.1CTS\Documents\Visual Studio 2017\Projects\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.dll
+C:\Users\kohanov.1CTS\Documents\Visual Studio 2017\Projects\CodeGenerator\CodeGenerator\bin\Debug\CodeGenerator.pdb
+C:\Users\kohanov.1CTS\Documents\Visual Studio 2017\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csprojAssemblyReference.cache
+C:\Users\kohanov.1CTS\Documents\Visual Studio 2017\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\kohanov.1CTS\Documents\Visual Studio 2017\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.dll
+C:\Users\kohanov.1CTS\Documents\Visual Studio 2017\Projects\CodeGenerator\CodeGenerator\obj\Debug\CodeGenerator.pdb
