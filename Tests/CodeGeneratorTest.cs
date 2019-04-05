@@ -24,75 +24,65 @@ namespace Tests
         }
 
         [TestMethod]
-        public void Encode_null_20190119_12345678_ArgumentNullException()
+        public void GetCorrectName_null_ArgumentNullException()
         {
             // Arrange
             string name = default;
-            DateTime date = new DateTime(2019, 1, 19);
-            uint account = 12345678;
 
             // Act
 
             // Assert
-            Assert.ThrowsException<ArgumentNullException>(()=> Generator.Encode(name, date, account));
+            Assert.ThrowsException<ArgumentNullException>(()=> Generator.GetCorrectName(name));
         }
 
         [TestMethod]
-        public void Encode_ffwerthrtrtbrb_20190119_12345678_ffwerthrJ10J07CLZI()
+        public void GetCorrectName_ffwerthrtrtbrb_ffwerthr()
         {
             // Arrange
-            string expected = "ffwerthrJ10J07CLZI";
+            string expected = "ffwerthr";
             string name = "ffwerthrtrtbrb";
-            DateTime date = new DateTime(2019, 1, 19);
-            uint account = 12345678;
 
             // Act
-            var result = Generator.Encode(name, date, account);
+            var result = Generator.GetCorrectName(name);
 
             // Assert
             Assert.AreEqual(expected, result);
         }
 
         [TestMethod]
-        public void Encode_ffwe_32960119_12345678_ArgumentOutOfRangeException()
+        public void GetEncodeDate_32960119_ArgumentOutOfRangeException()
         {
             // Arrange
-            string name = "ffwe";
             DateTime date = new DateTime(3296, 1, 19);
-            uint account = 12345678;
 
             // Act
 
             // Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(()=> Generator.Encode(name, date, account));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(()=> Generator.GetEncodeDate(date));
         }
 
         [TestMethod]
-        public void Encode_ffwe_20190119_100000000_ArgumentOutOfRangeException()
+        public void GetEncodeAccount_100000000_ArgumentOutOfRangeException()
         {
             // Arrange
-            string name = "ffwe";
-            DateTime date = new DateTime(2019, 1, 19);
             uint account = 100000000;
 
             // Act
 
             // Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => Generator.Encode(name, date, account));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => Generator.GetEncodeAccount(account));
         }
 
         [TestMethod]
-        public void Encode_ffwe_20190119_0_ArgumentOutOfRangeException()
+        public void GetEncodeAccount_ffwe_20190119_0_ArgumentOutOfRangeException()
         {
             // Arrange
-            string name = "ffwe";
-            DateTime date = new DateTime(2019, 1, 19);
             uint account = 0;
 
             // Act
 
             // Assert
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => Generator.Encode(name, date, account));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => Generator.GetEncodeAccount(account));
         }
 
         [TestMethod]
@@ -122,30 +112,6 @@ namespace Tests
             
             // Assert
             Assert.ThrowsException<ArgumentException>(()=> Generator.Decode(dataStr));
-        }
-
-        [TestMethod]
-        public void Decode_ffweJa0J07CLZI_ArgumentException()
-        {
-            // Arrange
-            string dataStr = "ffweJa0J07CLZI";
-
-            // Act
-
-            // Assert
-            Assert.ThrowsException<FormatException>(() => Generator.Decode(dataStr));
-        }
-
-        [TestMethod]
-        public void Decode_ffweJ10J07CaZI_ArgumentException()
-        {
-            // Arrange
-            string dataStr = "ffweJ10J07CaZI";
-
-            // Act
-
-            // Assert
-            Assert.ThrowsException<FormatException>(() => Generator.Decode(dataStr));
         }
 
     }
