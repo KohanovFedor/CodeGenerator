@@ -19,7 +19,6 @@ namespace CodeGenerator
         {
             return GetCorrectName(name) + GetEncodeDate(date) + GetEncodeAccount(account);
         }
-
         /// <summary>
         /// Decode from Code(string) to data(string,DateTime,uint)
         /// </summary>
